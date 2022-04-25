@@ -1,0 +1,31 @@
+create gihub repository
+#git init   
+
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Mykmicheals/newsApp.git replace with (git remote set-url origin https://mykmicheals@github.com/mykmicheals/newsApp.git)
+git push -u origin main
+
+npm install gh-pages --save-dev
+
+
+in your package.json file
+
+'homepage':'http://mykmicheals.github.io/newsApp'
+
+in the script array add
+
+"predeploy":"npm run build",
+"deploy":"gh-pages -d build",
+
+git add .
+git commit -m 'Deployed website'
+git push
+npm run deploy
+
+
+
+
+my git token
+        
+        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
